@@ -12,6 +12,7 @@ data class AppLanguageOption(
 private val supportedLanguageTags = listOf(
     "en",
     "bn",
+    "cs",
     "de",
     "es",
     "fr",

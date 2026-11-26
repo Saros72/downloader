@@ -1,1 +1,40 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">Domů</string>
+    <string name="nav_downloads">Stahování</string>
+    <string name="nav_more">Více</string>
+    <string name="common_settings">Nastavení</string>
+    <string name="common_help">Nápověda</string>
+    <string name="common_clear">Vymazat</string>
+    <string name="common_select">Vybrat</string>
+    <string name="common_remove">Odebrat</string>
+    <string name="common_close">Zavřít</string>
+    <string name="common_cancel">Zrušit</string>
+    <string name="common_save">Uložit</string>
+    <string name="common_delete">Smazat</string>
+    <string name="common_share">Sdílet</string>
+    <string name="common_rename">Přejmenovat</string>
+    <string name="common_edit">Upravit</string>
+    <string name="common_loading">Načítání…</string>
+    <string name="common_unknown_uploader">Neznámý nahrávající</string>
+    <string name="browser_metered_body">Jste připojeni k mobilním datům. Nechte stahování ve frontě, dokud se nepřipojíte k Wi-Fi, nebo povolte stahování přes mobilní data.</string>
+    <string name="browser_allow_cellular">Povolit mobilní data</string>
+    <string name="browser_wait_for_wifi">Počkat na Wi-Fi</string>
+    <string name="browser_title">Procházet</string>
+    <string name="browser_subtitle">Vložte odkaz a začněte.</string>
+    <string name="browser_open_history">Otevřít historii</string>
+    <string name="browser_actions">Akce procházení</string>
+    <string name="browser_use_light_theme">Světlý motiv</string>
+    <string name="browser_use_dark_theme">Tmavý motiv</string>
+    <string name="browser_url_label">Vložte nebo zadejte odkaz</string>
+    <string name="browser_paste">Vložit</string>
+    <string name="browser_analyzing">Analyzuji…</string>
+    <string name="browser_analyze_link">Analyzovat odkaz</string>
+    <string name="browser_feedback_label">Domů</string>
+    <string name="browser_download_setup_intro_title">Před prvním stažením</string>
+    <string name="browser_download_setup_setup_title">Zajistěte si pohodlnější přístup</string>
+    <string name="browser_download_setup_intro_body_1">Obsah můžete stahovat i bez souborů cookie, ale pro lepší fungování stahování doporučujeme je vytvořit („Nastavení“ &gt; „Přístup a síť“).</string>
+    <string name="browser_download_setup_intro_body_2">Pokud se stahování nezdaří nebo zamrzne, zkuste cookie vytvořit (nebo znovu vytvořit).</string>
+    <string name="browser_download_setup_setup_body_1">Pokud chcete co nejbezpečnější nastavení, začněte vytvořením cookie. U YouTube je zachování přístupu dalším krokem, který obvykle pomáhá při blokování videí nebo problémech s přihlášením.</string>
+    <string name="browser_download_setup_setup_body_2">Tyto kroky můžete přeskočit a vrátit se k nim později v části „Nastavení“ nebo „Rozšířené“.</string>
+</resources>

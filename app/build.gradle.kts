@@ -283,7 +283,7 @@ val downloadYtDlpTask by tasks.registering {
     val ytDlpDownloadUrl = "https://github.com/yt-dlp/yt-dlp/releases/download/$ytDlpVersion/yt-dlp"
     val expectedYtDlpSha256 = "e51e69e89489f199530f13d32a4342da3ddb2cf34842f364603a066db05afbf3"
     val certUrlString = "https://curl.se/ca/cacert.pem"
-    val expectedCertSha256 = "796f1389bfea13c0ed78f663b765baaff54a508e5483786bd6ece73c5e3e3cbe"
+    val expectedCertSha256 = "427c064216761a1e72a8b30f0d954d08cb6e4435a82091fb865afd20c8497285"
 
     inputs.property("url", ytDlpDownloadUrl)
     inputs.property("expectedYtDlpSha256", expectedYtDlpSha256)

@@ -1,5 +1,7 @@
 package com.localdownloader.ui.screens.settings
 
+import androidx.compose.ui.res.stringResource
+import com.localdownloader.R
 import android.content.Intent
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Code
@@ -107,7 +109,7 @@ fun CreditsSettingsScreen(
     }
 
     PreferencePageScaffold(
-        title = "Open Source Credits",
+        title = stringResource(R.string.hc_open_source_credits),
         onBack = onBack,
         modifier = modifier,
     ) {

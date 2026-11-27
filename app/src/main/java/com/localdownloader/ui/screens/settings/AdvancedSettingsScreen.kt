@@ -1,5 +1,7 @@
 package com.localdownloader.ui.screens.settings
 
+import androidx.compose.ui.res.stringResource
+import com.localdownloader.R
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AllInclusive
 import androidx.compose.material.icons.rounded.Animation
@@ -71,7 +73,7 @@ fun AdvancedSettingsScreen(
     val seekOptions = listOf(5, 10, 15, 30)
 
     PreferencePageScaffold(
-        title = "Advanced settings",
+        title = stringResource(R.string.hc_advanced_settings),
         onBack = onBack,
         modifier = modifier,
     ) {

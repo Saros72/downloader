@@ -147,13 +147,13 @@ fun DownloadSettingsScreen(
         modifier = modifier,
     ) {
         item {
-            PreferenceSubtitle(text = "DOWNLOAD PRESETS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_download_presets))
         }
         item {
             PreferenceItem(
                 icon = Icons.Rounded.Add,
-                title = "Create new preset",
-                description = "Configure custom quality, format, audio, and subtitle preferences",
+                title = stringResource(R.string.hc_create_new_preset),
+                description = stringResource(R.string.hc_configure_custom_quality_format_audio_an),
                 onClick = { isCreatingPreset = true },
             )
         }
@@ -182,13 +182,13 @@ fun DownloadSettingsScreen(
         item {
             PreferenceItem(
                 icon = Icons.Rounded.Refresh,
-                title = "Reset presets to defaults",
-                description = "Restore built-in presets (Best Video, 1080p MP4, 480p Saver, MP3, FLAC)",
+                title = stringResource(R.string.hc_reset_presets_to_defaults),
+                description = stringResource(R.string.hc_restore_built_in_presets_best_video_1080),
                 onClick = onResetPresetsToDefault,
             )
         }
         item {
-            PreferenceSubtitle(text = "TEMPLATES & CONTAINERS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_templates_containers))
         }
         item {
             PreferenceItem(
@@ -267,13 +267,13 @@ fun DownloadSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "METADATA & SUBTITLES")
+            PreferenceSubtitle(text = stringResource(R.string.hc_metadata_subtitles))
         }
         item {
             PreferenceSwitch(
                 icon = Icons.Rounded.Subtitles,
                 title = stringResource(R.string.download_defaults_subtitles_title),
-                description = "Download subtitle files alongside media when available",
+                description = stringResource(R.string.hc_download_subtitle_files_alongside_media),
                 isChecked = uiState.downloadSubtitles,
                 onClick = { onDefaultDownloadSubtitlesChanged(!uiState.downloadSubtitles) },
             )
@@ -282,7 +282,7 @@ fun DownloadSettingsScreen(
             PreferenceSwitch(
                 icon = Icons.Rounded.Subtitles,
                 title = stringResource(R.string.download_defaults_embed_subtitles_title),
-                description = "Embed subtitles directly into the video container",
+                description = stringResource(R.string.hc_embed_subtitles_directly_into_the_video),
                 isChecked = uiState.embedSubtitles,
                 onClick = { onDefaultEmbedSubtitlesChanged(!uiState.embedSubtitles) },
             )
@@ -291,7 +291,7 @@ fun DownloadSettingsScreen(
             PreferenceSwitch(
                 icon = Icons.Rounded.Description,
                 title = stringResource(R.string.download_defaults_embed_metadata_title),
-                description = "Tag title, artist, album, and track metadata into downloaded media",
+                description = stringResource(R.string.hc_tag_title_artist_album_and_track_metadat),
                 isChecked = uiState.embedMetadata,
                 onClick = { onDefaultEmbedMetadataChanged(!uiState.embedMetadata) },
             )
@@ -300,13 +300,13 @@ fun DownloadSettingsScreen(
             PreferenceSwitch(
                 icon = Icons.Rounded.PhotoSizeSelectActual,
                 title = stringResource(R.string.download_defaults_embed_thumbnail_title),
-                description = "Embed album/video artwork cover into media files",
+                description = stringResource(R.string.hc_embed_album_video_artwork_cover_into_med),
                 isChecked = uiState.embedThumbnail,
                 onClick = { onDefaultEmbedThumbnailChanged(!uiState.embedThumbnail) },
             )
         }
         item {
-            PreferenceSubtitle(text = "FORMAT SELECTOR INTERACTION")
+            PreferenceSubtitle(text = stringResource(R.string.hc_format_selector_interaction))
         }
         item {
             PreferenceItem(
@@ -344,7 +344,7 @@ fun DownloadSettingsScreen(
             PreferenceSwitch(
                 icon = Icons.Rounded.Speed,
                 title = stringResource(R.string.download_defaults_show_fps_title),
-                description = "Display frames per second for video streams",
+                description = stringResource(R.string.hc_display_frames_per_second_for_video_stre),
                 isChecked = uiState.appSettings.showFormatFps,
                 onClick = { onShowFormatFpsChanged(!uiState.appSettings.showFormatFps) },
             )
@@ -353,7 +353,7 @@ fun DownloadSettingsScreen(
             PreferenceSwitch(
                 icon = Icons.Rounded.Tune,
                 title = stringResource(R.string.download_defaults_show_codec_title),
-                description = "Display video and audio codec tags in format list",
+                description = stringResource(R.string.hc_display_video_and_audio_codec_tags_in_fo),
                 isChecked = uiState.appSettings.showFormatCodec,
                 onClick = { onShowFormatCodecChanged(!uiState.appSettings.showFormatCodec) },
             )
@@ -362,13 +362,13 @@ fun DownloadSettingsScreen(
             PreferenceSwitch(
                 icon = Icons.Rounded.Equalizer,
                 title = stringResource(R.string.download_defaults_show_bitrate_title),
-                description = "Display stream bitrate in format list when available",
+                description = stringResource(R.string.hc_display_stream_bitrate_in_format_list_wh),
                 isChecked = uiState.appSettings.showFormatBitrate,
                 onClick = { onShowFormatBitrateChanged(!uiState.appSettings.showFormatBitrate) },
             )
         }
         item {
-            PreferenceSubtitle(text = "QUEUE & PERFORMANCE")
+            PreferenceSubtitle(text = stringResource(R.string.hc_queue_performance))
         }
         item {
             val threadsTitle = stringResource(R.string.battery_threads_title)
@@ -431,13 +431,13 @@ fun DownloadSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "HISTORY RETENTION")
+            PreferenceSubtitle(text = stringResource(R.string.hc_history_retention))
         }
         item {
             PreferenceSwitch(
                 icon = Icons.Rounded.Description,
                 title = stringResource(R.string.download_defaults_keep_links_title),
-                description = "Remember previously analyzed URLs in quick suggestions",
+                description = stringResource(R.string.hc_remember_previously_analyzed_urls_in_qui),
                 isChecked = uiState.appSettings.keepAnalyzedLinkHistory,
                 onClick = { onKeepAnalyzedLinkHistoryChanged(!uiState.appSettings.keepAnalyzedLinkHistory) },
             )

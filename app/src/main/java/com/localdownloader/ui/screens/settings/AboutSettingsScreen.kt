@@ -80,7 +80,7 @@ fun AboutSettingsScreen(
         modifier = modifier,
     ) {
         item {
-            PreferenceSubtitle(text = "APPLICATION INFO")
+            PreferenceSubtitle(text = stringResource(R.string.hc_application_info))
         }
         item {
             PreferenceItem(
@@ -102,12 +102,12 @@ fun AboutSettingsScreen(
             PreferenceItem(
                 icon = Icons.Rounded.SystemUpdate,
                 title = stringResource(R.string.about_updates_title),
-                description = "App, yt-dlp, and FFmpeg updates",
+                description = stringResource(R.string.hc_app_yt_dlp_and_ffmpeg_updates),
                 onClick = onOpenUpdates,
             )
         }
         item {
-            PreferenceSubtitle(text = "COMMUNITY & LINKS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_community_links))
         }
         item {
             PreferenceItem(
@@ -129,7 +129,7 @@ fun AboutSettingsScreen(
             PreferenceItem(
                 icon = Icons.Rounded.Description,
                 title = "yt-dlp",
-                description = "Downloader engine",
+                description = stringResource(R.string.hc_downloader_engine),
                 onClick = { openUrl("https://github.com/yt-dlp/yt-dlp") },
             )
         }
@@ -137,7 +137,7 @@ fun AboutSettingsScreen(
             PreferenceItem(
                 icon = Icons.Rounded.Description,
                 title = "FFmpeg",
-                description = "Media processing runtime",
+                description = stringResource(R.string.hc_media_processing_runtime),
                 onClick = { openUrl("https://github.com/FFmpeg/FFmpeg") },
             )
         }
@@ -159,24 +159,24 @@ fun AboutSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "LEGAL & CREDITS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_legal_credits))
         }
         item {
             PreferenceNavigationRow(
                 icon = Icons.Rounded.Code,
-                title = "Open Source Credits",
-                description = "Licenses and open source components powering this app",
+                title = stringResource(R.string.hc_open_source_credits),
+                description = stringResource(R.string.hc_licenses_and_open_source_components_powe),
                 onClick = onOpenCredits,
             )
         }
         item {
-            PreferenceSubtitle(text = "RESET")
+            PreferenceSubtitle(text = stringResource(R.string.hc_reset))
         }
         item {
             PreferenceItem(
                 icon = Icons.Rounded.RestartAlt,
                 title = stringResource(R.string.about_reset_title),
-                description = "Restore all preferences to default",
+                description = stringResource(R.string.hc_restore_all_preferences_to_default),
                 onClick = {
                     confirmDialog = SettingConfirmDialogState(
                         title = resetDialogTitle,

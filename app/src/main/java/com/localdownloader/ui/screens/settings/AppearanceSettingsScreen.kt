@@ -59,7 +59,7 @@ fun AppearanceSettingsScreen(
         modifier = modifier,
     ) {
         item {
-            PreferenceSubtitle(text = "THEME & STYLING")
+            PreferenceSubtitle(text = stringResource(R.string.hc_theme_styling))
         }
         item {
             PreferenceItem(
@@ -152,7 +152,7 @@ fun AppearanceSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "LANGUAGE")
+            PreferenceSubtitle(text = stringResource(R.string.hc_language))
         }
         item {
             PreferenceItem(

@@ -36,7 +36,7 @@ fun AccessSettingsScreen(
         modifier = modifier,
     ) {
         item {
-            PreferenceSubtitle(text = "NETWORK RULES")
+            PreferenceSubtitle(text = stringResource(R.string.hc_network_rules))
         }
         item {
             PreferenceSwitch(
@@ -48,7 +48,7 @@ fun AccessSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "COOKIES & AUTHENTICATION")
+            PreferenceSubtitle(text = stringResource(R.string.hc_cookies_authentication))
         }
         item {
             PreferenceSwitch(
@@ -75,7 +75,7 @@ fun AccessSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "PLATFORM ACCESS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_platform_access))
         }
         item {
             PreferenceNavigationRow(

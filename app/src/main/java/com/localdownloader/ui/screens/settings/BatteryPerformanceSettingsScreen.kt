@@ -115,7 +115,7 @@ fun BatteryPerformanceSettingsScreen(
         modifier = modifier,
     ) {
         item {
-            PreferenceSubtitle(text = "BATTERY OPTIMIZATION")
+            PreferenceSubtitle(text = stringResource(R.string.hc_battery_optimization_2))
         }
         item {
             if (isIgnoringOptimizations) {
@@ -144,7 +144,7 @@ fun BatteryPerformanceSettingsScreen(
         }
 
         item {
-            PreferenceSubtitle(text = "ECO MODE")
+            PreferenceSubtitle(text = stringResource(R.string.hc_eco_mode))
         }
         item {
             val currentMode = uiState.appSettings.batterySaverMode
@@ -192,7 +192,7 @@ fun BatteryPerformanceSettingsScreen(
         }
 
         item {
-            PreferenceSubtitle(text = "CONCURRENCY & THREADS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_concurrency_threads))
         }
         item {
             val currentThreads = uiState.appSettings.defaultConcurrentFragments
@@ -255,7 +255,7 @@ fun BatteryPerformanceSettingsScreen(
         }
 
         item {
-            PreferenceSubtitle(text = "POWER RULES")
+            PreferenceSubtitle(text = stringResource(R.string.hc_power_rules))
         }
         item {
             PreferenceSwitch(

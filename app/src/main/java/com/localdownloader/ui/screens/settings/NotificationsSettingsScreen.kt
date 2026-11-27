@@ -33,7 +33,7 @@ fun NotificationsSettingsScreen(
         modifier = modifier,
     ) {
         item {
-            PreferenceSubtitle(text = "DOWNLOAD ALERTS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_download_alerts))
         }
         item {
             PreferenceSwitch(
@@ -69,7 +69,7 @@ fun NotificationsSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "FOREGROUND SERVICES")
+            PreferenceSubtitle(text = stringResource(R.string.hc_foreground_services))
         }
         item {
             PreferenceItem(

@@ -149,7 +149,7 @@ fun StorageSettingsScreen(
             }
         }
         item {
-            PreferenceSubtitle(text = "DOWNLOAD DIRECTORIES")
+            PreferenceSubtitle(text = stringResource(R.string.hc_download_directories))
         }
         item {
             FolderPreferenceRow(
@@ -246,13 +246,13 @@ fun StorageSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "STORAGE USAGE & STATS")
+            PreferenceSubtitle(text = stringResource(R.string.hc_storage_usage_stats))
         }
         item {
             PreferenceItem(
                 icon = Icons.Rounded.Storage,
-                title = "Available storage",
-                description = "Free space on download storage volume",
+                title = stringResource(R.string.hc_available_storage),
+                description = stringResource(R.string.hc_free_space_on_download_storage_volume),
                 value = formatFileSize(availableStorageBytes),
                 onClick = null,
             )
@@ -261,7 +261,7 @@ fun StorageSettingsScreen(
             PreferenceItem(
                 icon = Icons.Rounded.LibraryBooks,
                 title = stringResource(R.string.storage_saved_items_title),
-                description = "Indexed downloads in local media database",
+                description = stringResource(R.string.hc_indexed_downloads_in_local_media_databas),
                 value = "$savedItemsCount items",
                 onClick = null,
             )
@@ -269,8 +269,8 @@ fun StorageSettingsScreen(
         item {
             PreferenceItem(
                 icon = Icons.Rounded.Folder,
-                title = "Possible duplicates",
-                description = "Downloaded files sharing identical sources or paths",
+                title = stringResource(R.string.hc_possible_duplicates),
+                description = stringResource(R.string.hc_downloaded_files_sharing_identical_sourc),
                 value = "$duplicateSavedItemsCount files",
                 onClick = null,
             )
@@ -279,13 +279,13 @@ fun StorageSettingsScreen(
             PreferenceItem(
                 icon = Icons.Rounded.CleaningServices,
                 title = stringResource(R.string.storage_temp_cache_title),
-                description = "Temporary download fragments and thumbnails",
+                description = stringResource(R.string.hc_temporary_download_fragments_and_thumbna),
                 value = formatFileSize(cacheSize),
                 onClick = null,
             )
         }
         item {
-            PreferenceSubtitle(text = "MEDIA LIBRARY BEHAVIOR")
+            PreferenceSubtitle(text = stringResource(R.string.hc_media_library_behavior))
         }
         item {
             PreferenceSwitch(
@@ -306,7 +306,7 @@ fun StorageSettingsScreen(
             )
         }
         item {
-            PreferenceSubtitle(text = "CLEANUP")
+            PreferenceSubtitle(text = stringResource(R.string.hc_cleanup))
         }
         item {
             PreferenceItem(

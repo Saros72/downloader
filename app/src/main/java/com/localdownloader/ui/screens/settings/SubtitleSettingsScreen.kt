@@ -1,5 +1,7 @@
 package com.localdownloader.ui.screens.settings
 
+import androidx.compose.ui.res.stringResource
+import com.localdownloader.R
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -93,7 +95,7 @@ fun SubtitleSettingsScreen(
     }
 
     PreferencePageScaffold(
-        title = "Subtitles & Captions",
+        title = stringResource(R.string.hc_subtitles_captions),
         onBack = onBack,
         modifier = modifier,
         actions = {
@@ -111,7 +113,7 @@ fun SubtitleSettingsScreen(
     ) {
         // Live Subtitle Preview Card
         item {
-            PreferenceSubtitle(text = "LIVE PLAYER PREVIEW")
+            PreferenceSubtitle(text = stringResource(R.string.hc_live_player_preview))
         }
         item {
             SubtitleLivePreviewBox(settings = currentViewSettings)
@@ -119,13 +121,13 @@ fun SubtitleSettingsScreen(
 
         // Section: Download & Extraction Defaults
         item {
-            PreferenceSubtitle(text = "DOWNLOAD & EMBEDDING")
+            PreferenceSubtitle(text = stringResource(R.string.hc_download_embedding))
         }
         item {
             PreferenceSwitch(
                 icon = Icons.Rounded.Subtitles,
-                title = "Auto-download subtitles",
-                description = "Automatically query and download subtitles during analysis.",
+                title = stringResource(R.string.hc_auto_download_subtitles),
+                description = stringResource(R.string.hc_automatically_query_and_download_subtitl),
                 isChecked = uiState.appSettings.autoDownloadSubtitles,
                 onClick = { onAutoDownloadSubtitlesChanged(!uiState.appSettings.autoDownloadSubtitles) },
             )
@@ -133,8 +135,8 @@ fun SubtitleSettingsScreen(
         item {
             PreferenceSwitch(
                 icon = Icons.Rounded.ClosedCaption,
-                title = "Auto-embed into video",
-                description = "Mux downloaded subtitles into MP4/MKV container so video players can toggle them.",
+                title = stringResource(R.string.hc_auto_embed_into_video),
+                description = stringResource(R.string.hc_mux_downloaded_subtitles_into_mp4_mkv_co),
                 isChecked = uiState.appSettings.autoEmbedSubtitles,
                 onClick = { onAutoEmbedSubtitlesChanged(!uiState.appSettings.autoEmbedSubtitles) },
             )
@@ -142,16 +144,16 @@ fun SubtitleSettingsScreen(
 
         // Section: Subtitle Colors & Styling
         item {
-            PreferenceSubtitle(text = "COLORS & EDGES")
+            PreferenceSubtitle(text = stringResource(R.string.hc_colors_edges))
         }
         item {
             PreferenceItem(
                 icon = Icons.Rounded.FormatColorText,
-                title = "Text color",
+                title = stringResource(R.string.hc_text_color),
                 description = currentViewSettings.textColor,
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = "Subtitle Text Color",
+                        title = stringResource(R.string.hc_subtitle_text_color),
                         selected = currentViewSettings.textColor,
                         options = listOf(
                             "White" to "Standard crisp white",
@@ -176,7 +178,7 @@ fun SubtitleSettingsScreen(
         item {
             PreferenceItem(
                 icon = Icons.Rounded.Palette,
-                title = "Background box",
+                title = stringResource(R.string.hc_background_box),
                 description = when (currentViewSettings.backgroundColor) {
                     "SemiTransparentBlack" -> "50% Translucent Black (Recommended)"
                     "SolidBlack" -> "Solid Black"
@@ -186,7 +188,7 @@ fun SubtitleSettingsScreen(
                 },
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = "Subtitle Background",
+                        title = stringResource(R.string.hc_subtitle_background),
                         selected = currentViewSettings.backgroundColor,
                         options = listOf(
                             "SemiTransparentBlack" to "50% Translucent Black (Balanced)",
@@ -209,11 +211,11 @@ fun SubtitleSettingsScreen(
         item {
             PreferenceItem(
                 icon = Icons.Rounded.Layers,
-                title = "Edge styling",
+                title = stringResource(R.string.hc_edge_styling),
                 description = currentViewSettings.edgeType,
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = "Subtitle Edge Type",
+                        title = stringResource(R.string.hc_subtitle_edge_type),
                         selected = currentViewSettings.edgeType,
                         options = listOf(
                             "Outline" to "Sharp bordered text outline",
@@ -235,16 +237,16 @@ fun SubtitleSettingsScreen(
 
         // Section: Typography & Position
         item {
-            PreferenceSubtitle(text = "TYPOGRAPHY & POSITION")
+            PreferenceSubtitle(text = stringResource(R.string.hc_typography_position))
         }
         item {
             PreferenceItem(
                 icon = Icons.Rounded.FormatSize,
-                title = "Font size scale",
+                title = stringResource(R.string.hc_font_size_scale),
                 description = formatSizeScaleLabel(currentViewSettings.fontSizeScale),
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = "Subtitle Font Size",
+                        title = stringResource(R.string.hc_subtitle_font_size),
                         selected = "${(currentViewSettings.fontSizeScale * 100).toInt()}%",
                         options = listOf(
                             0.75f to "75% (Small / Compact)",
@@ -268,11 +270,11 @@ fun SubtitleSettingsScreen(
         item {
             PreferenceItem(
                 icon = Icons.Rounded.TextFields,
-                title = "Font typeface",
+                title = stringResource(R.string.hc_font_typeface),
                 description = currentViewSettings.typeface,
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = "Subtitle Typeface",
+                        title = stringResource(R.string.hc_subtitle_typeface),
                         selected = currentViewSettings.typeface,
                         options = listOf(
                             "Default" to "System default font",
@@ -297,11 +299,11 @@ fun SubtitleSettingsScreen(
         item {
             PreferenceItem(
                 icon = Icons.Rounded.VerticalAlignBottom,
-                title = "Screen position offset",
+                title = stringResource(R.string.hc_screen_position_offset),
                 description = formatPositionOffsetLabel(currentViewSettings.bottomOffsetFraction),
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = "Vertical Position Offset",
+                        title = stringResource(R.string.hc_vertical_position_offset),
                         selected = "${(currentViewSettings.bottomOffsetFraction * 100).toInt()}%",
                         options = listOf(
                             0.04f to "4% (Low / Bottom edge)",

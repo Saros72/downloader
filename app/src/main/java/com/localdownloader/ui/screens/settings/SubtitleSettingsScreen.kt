@@ -86,6 +86,12 @@ fun SubtitleSettingsScreen(
 ) {
     var choiceDialog by remember { mutableStateOf<SettingChoiceDialogState?>(null) }
     val currentViewSettings = uiState.appSettings.subtitleViewSettings
+    val dialogTitleTextColor = stringResource(R.string.hc_subtitle_text_color)
+    val dialogTitleBackground = stringResource(R.string.hc_subtitle_background)
+    val dialogTitleEdgeType = stringResource(R.string.hc_subtitle_edge_type)
+    val dialogTitleFontSize = stringResource(R.string.hc_subtitle_font_size)
+    val dialogTitleTypeface = stringResource(R.string.hc_subtitle_typeface)
+    val dialogTitlePosition = stringResource(R.string.hc_vertical_position_offset)
 
     choiceDialog?.let { state ->
         SettingChoiceDialog(
@@ -153,7 +159,7 @@ fun SubtitleSettingsScreen(
                 description = currentViewSettings.textColor,
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = stringResource(R.string.hc_subtitle_text_color),
+                        title = dialogTitleTextColor,
                         selected = currentViewSettings.textColor,
                         options = listOf(
                             "White" to "Standard crisp white",
@@ -188,7 +194,7 @@ fun SubtitleSettingsScreen(
                 },
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = stringResource(R.string.hc_subtitle_background),
+                        title = dialogTitleBackground,
                         selected = currentViewSettings.backgroundColor,
                         options = listOf(
                             "SemiTransparentBlack" to "50% Translucent Black (Balanced)",
@@ -215,7 +221,7 @@ fun SubtitleSettingsScreen(
                 description = currentViewSettings.edgeType,
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = stringResource(R.string.hc_subtitle_edge_type),
+                        title = dialogTitleEdgeType,
                         selected = currentViewSettings.edgeType,
                         options = listOf(
                             "Outline" to "Sharp bordered text outline",
@@ -246,7 +252,7 @@ fun SubtitleSettingsScreen(
                 description = formatSizeScaleLabel(currentViewSettings.fontSizeScale),
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = stringResource(R.string.hc_subtitle_font_size),
+                        title = dialogTitleFontSize,
                         selected = "${(currentViewSettings.fontSizeScale * 100).toInt()}%",
                         options = listOf(
                             0.75f to "75% (Small / Compact)",
@@ -274,7 +280,7 @@ fun SubtitleSettingsScreen(
                 description = currentViewSettings.typeface,
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = stringResource(R.string.hc_subtitle_typeface),
+                        title = dialogTitleTypeface,
                         selected = currentViewSettings.typeface,
                         options = listOf(
                             "Default" to "System default font",
@@ -303,7 +309,7 @@ fun SubtitleSettingsScreen(
                 description = formatPositionOffsetLabel(currentViewSettings.bottomOffsetFraction),
                 onClick = {
                     choiceDialog = SettingChoiceDialogState(
-                        title = stringResource(R.string.hc_vertical_position_offset),
+                        title = dialogTitlePosition,
                         selected = "${(currentViewSettings.bottomOffsetFraction * 100).toInt()}%",
                         options = listOf(
                             0.04f to "4% (Low / Bottom edge)",

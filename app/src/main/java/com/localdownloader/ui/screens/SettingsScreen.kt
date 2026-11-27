@@ -104,8 +104,8 @@ fun SettingsScreen(
                     exit = shrinkVertically() + fadeOut(),
                 ) {
                     PreferencesHintCard(
-                        title = "Battery optimization",
-                        description = "Disable battery optimization to allow uninterrupted background downloads.",
+                        title = stringResource(R.string.hc_battery_optimization),
+                        description = stringResource(R.string.hc_disable_battery_optimization_to_allow_un),
                         icon = Icons.Rounded.EnergySavingsLeaf,
                         onClick = {
                             runCatching {
@@ -128,7 +128,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_download_defaults_title),
-                description = "Format templates, containers, and queue behavior",
+                description = stringResource(R.string.hc_format_templates_containers_and_queue_be),
                 icon = Icons.Rounded.CloudDownload,
                 onClick = onOpenDownloads,
             )
@@ -136,7 +136,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_subtitles_title),
-                description = "Subtitle auto-download, embedding, styling, and preview",
+                description = stringResource(R.string.hc_subtitle_auto_download_embedding_styling),
                 icon = Icons.Rounded.Subtitles,
                 onClick = onOpenSubtitles,
             )
@@ -144,7 +144,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_storage_title),
-                description = "Storage directories, subfolders, and cache cleanup",
+                description = stringResource(R.string.hc_storage_directories_subfolders_and_cache),
                 icon = Icons.Rounded.Folder,
                 onClick = onOpenStorage,
             )
@@ -152,7 +152,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_access_title),
-                description = "Network rules, cookies, and YouTube access",
+                description = stringResource(R.string.hc_network_rules_cookies_and_youtube_access),
                 icon = Icons.Rounded.Security,
                 onClick = onOpenAccess,
             )
@@ -160,7 +160,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_appearance_title),
-                description = "Theme mode, accent colors, and app language",
+                description = stringResource(R.string.hc_theme_mode_accent_colors_and_app_languag),
                 icon = Icons.Rounded.Palette,
                 onClick = onOpenAppearance,
             )
@@ -168,7 +168,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_battery_title),
-                description = "Download threads, eco mode, and power limits",
+                description = stringResource(R.string.hc_download_threads_eco_mode_and_power_limi),
                 icon = Icons.Rounded.BatteryChargingFull,
                 onClick = onOpenBattery,
             )
@@ -176,15 +176,15 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_notifications_title),
-                description = "Completion, error, and status alerts",
+                description = stringResource(R.string.hc_completion_error_and_status_alerts),
                 icon = Icons.Rounded.NotificationsActive,
                 onClick = onOpenNotifications,
             )
         }
         item {
             SettingItem(
-                title = "Advanced settings",
-                description = "Timeouts, rate limits, filename rules, playback & queue options",
+                title = stringResource(R.string.hc_advanced_settings),
+                description = stringResource(R.string.hc_timeouts_rate_limits_filename_rules_play),
                 icon = Icons.Rounded.Tune,
                 onClick = onOpenAdvanced,
             )
@@ -192,7 +192,7 @@ fun SettingsScreen(
         item {
             SettingItem(
                 title = stringResource(R.string.settings_app_log_title),
-                description = "Application logs, export, and diagnostics",
+                description = stringResource(R.string.hc_application_logs_export_and_diagnostics),
                 icon = Icons.Rounded.BugReport,
                 onClick = onOpenAppLog,
             )
